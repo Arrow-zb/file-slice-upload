@@ -45,11 +45,12 @@
         axios({
           method:'post',
           url:'/upload',
-          responseType:'stream'
-        })
-          .then(function(response) {
-          response.data.pipe(fs.createWriteStream('ada_lovelace.jpg'))
+          data: formData
+        }).then(res => {
+          
         });
+        start = end;
+        index++;
       }
     }
   </script>
